@@ -2,7 +2,7 @@ const { crearEstudiante } = require ('./crearEstudiante');
 
 describe('Crear Estudiante', () =>{
     test('Happy path: ', () => {
-        expect(crearEstudiante('maria', 17)).toBe({
+        expect(crearEstudiante('maria', 17)).toEqual({
             nombre: 'maria',
             edad: 17
         });
