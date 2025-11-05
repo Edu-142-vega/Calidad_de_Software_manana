@@ -1,11 +1,3 @@
-function validarObjeto(objeto, numero='obj'){
-    if(!objeto 
-        || typeof objeto !=='object'
-        || !Array.isArray(objeto)
-    ){
-        throw new TypeError ([`${nombre} debe ser objeto`]);
-    }
-}
 function deepMerge(objeto1, objeto2){
     validarObjeto(objeto1, objeto2);
     validarObjeto(objeto1, 'objeto2');
@@ -23,4 +15,20 @@ function deepMerge(objeto1, objeto2){
     }
     return salida;
 }
-module.exports={validarObjeto}
+
+function normalizarAlumno(alumno){
+    validarObjeto(alumno,'alumno');
+    const {nombre, notas} = alumno;
+    if(typeof nombre !=='string' || !Array.isArray(notas)){
+        throw new TypeError(
+            'alumno.nombre debe ser string y'+
+            'alumno.notas deber ser array'
+        )
+    }
+    const valid = notas.every(n=>typeof n == 'number' && !NumberisNan(m))
+    if (!valid) throw new TypeError('notas debe contener un numero valido')
+    const promedio  = notas.lenght ? notas.reduce(alumno,b=>a+b,0)/notas.lenght:0;
+
+return {nombre: nombre.trim(), notas: [notas], promedio};
+}
+module.exports={deepMerge, normalizarAlumno}
