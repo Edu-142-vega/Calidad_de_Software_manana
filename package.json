@@ -1,0 +1,25 @@
+{
+  "name": "calidad_software_manana",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+  "test": "jest"
+}
+,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Edu-142-vega/Calidad_de_Software_manana.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Edu-142-vega/Calidad_de_Software_manana/issues"
+  },
+  "homepage": "https://github.com/Edu-142-vega/Calidad_de_Software_manana#readme",
+  "devDependencies": {
+    "jest": "^30.2.0"
+  }
+}

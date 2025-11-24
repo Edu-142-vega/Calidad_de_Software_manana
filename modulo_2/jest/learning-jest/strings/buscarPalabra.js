@@ -1,18 +1,13 @@
-function contarPalabras(texto){
-    if(!texto || typeof texto !== 'string'){
-        throw new TypeError("frase inválida");
+function buscarPalabra(frase, palabra) {
+    if (!frase || typeof frase !== 'string') {
+        throw new TypeError('frase invalida');
     }
-    const textoTrimmed = texto.trim();
-    if (textoTrimmed === '')
-        throw new TypeError("frase inválida");
-    return textoTrimmed.split(/\s+/).length;
+    if (!palabra || typeof palabra !== 'string') {
+        throw new TypeError('palabra invalida');
+    }
+
+    const palabras = frase.trim().toLowerCase().split(/\s+/);
+    return palabras.filter(p => p === palabra.toLowerCase()).length;
 }
 
-module.exports = { contarPalabras };
-
-
-
-
-
-
-
+module.exports = { buscarPalabra };

@@ -20,4 +20,4 @@ function calcularPrecioPorVolumen(cantidad, precioUnitario) {
     const precioFinal = subtotal * (1 - descuento);
     return precioFinal;
 }
-modulo.exports = { calcularPrecioPorVolumen };
+module.exports = { calcularPrecioPorVolumen };

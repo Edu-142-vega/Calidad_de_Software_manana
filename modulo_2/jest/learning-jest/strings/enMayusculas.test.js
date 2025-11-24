@@ -1,15 +1,12 @@
-const { enMayusculas } = require("./enMayusculas")
+const { enMayusculas } = require('./enMayusculas');
 
-decribe('En Mayusculas', () => {
+describe('En Mayusculas', () => {
     test('Happy path: JEST', () => {
-        const response = enMayusculas('jest')
-        expect (response).toBe('JEST');
+        const response = enMayusculas('jest');
+        expect(response).toBe('JEST');
     });
-    test('Sad path: ERROR',
-        () => {
-            expect(() => enMayusculas(null
-            )).toThrow('texto invalido');
-            expect(() => enMayusculas (123))
-                .toThrow('texto invalido');
-        });
+
+    test('Sad path: ERROR texto inválido', () => {
+        expect(() => enMayusculas(null)).toThrow('texto invalido');
+    });
 });

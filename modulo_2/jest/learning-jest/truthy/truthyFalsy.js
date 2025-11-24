@@ -1,16 +1,26 @@
-function esTruthy(valor){
-    return !!valor; //coercion booleana
+function esTruthy(valor) {
+    return !!valor;
 }
 
-function retornarDefault(valor, defecto = 'N/A'){
-    return valor ? valor : defecto; //usar truthy
+function retornDefault(valor, defecto) {
+    return valor || defecto;
 }
 
-function requiereTextoNoVacio(txt) {
-    if(typeof txt !== 'string' || !txt.trim()) {
-        throw new TypeError(' texto requerido');
+function requiereTextoNoVacio(texto) {
+    if (typeof texto !== 'string') {
+        throw new TypeError('texto requerido');
     }
-    return txt.trim();
+
+    const trimmed = texto.trim();
+    if (!trimmed) {
+        throw new TypeError('texto requerido');
+    }
+
+    return trimmed;
 }
 
-module.exports = { esTruthy, retornarDefault, requiereTextoNoVacio};
+module.exports = {
+    esTruthy,
+    retornDefault,
+    requiereTextoNoVacio
+};
