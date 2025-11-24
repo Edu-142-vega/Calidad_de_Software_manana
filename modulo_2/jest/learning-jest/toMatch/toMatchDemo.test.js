@@ -6,9 +6,9 @@ const {
 
 describe('toMatch matcher', () => {
   test('Happy path: validar correos electronicos', () => {
-    // Usando directamente regex con toMatch
+
     expect('usuario@mail.com').toMatch(/^[\w.-]+@[\w.-]+\.[a-z]{2,}$/i);
-    // Usando la función validarEmail
+
     expect(validarEmail('alguien@dominio.ec')).toBe(true);
   });
 

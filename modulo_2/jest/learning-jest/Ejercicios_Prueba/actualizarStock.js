@@ -1,3 +1,5 @@
+//estudiar
+
 function actualizarStock(stockActual, movimiento) {
     if (
         !Number.isInteger(stockActual) ||
